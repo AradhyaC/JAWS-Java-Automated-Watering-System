@@ -1,7 +1,13 @@
 # JAWS | Java Automated Watering System
 
+<p align="center">
+  <img height="400" src="images/setup.png" alt="The Setup">
+</p>
+
 ### OBJECTIVE
 The Java Automated Watering System (JAWS) project was developed to explore autonomous plant maintenance using sensor-based monitoring and automated watering control. The system is intended for applications where regular human interaction is restricted or impractical, including large-scale vegetation management and environments involving plants that may pose hazardous to humans.
+
+<img align="right" height="500" src="images/AWS_Flowchart.png" alt="Java Program Flowchart">
 
 ### SUCCESS REQUIREMENTS
 1. Autonomously maintain soil moisture within a defined moisture threshold.
@@ -21,6 +27,9 @@ The Java Automated Watering System (JAWS) project was developed to explore auton
 
 3. StdLib – A java library that implements several libraries including graphical functionality through the StdDraw class.
     - The StdDraw class (with setCanvasSize, setPenRadius, setPenColor, clear, setFont, text, setYscale, line, and setXscale) was used for drawing a dynamic graph of moisture level over time. This was done by first storing the time and processed sensor data (of type Long and Integer respectively) in a LinkedHashMap. This LinkedHashMap was then iterated over in a For-Loop that draws the data points, connecting lines, and 10s markers on the x-axis.
+
+<img align="left" height="300" src="images/closeup.png" alt="Close-up of Seeeduino Lotus connections">
+<img align="left" height="300" src="images/oled.png" alt="OLED display outputting runtime information">
 
 ### COMPONENTS USED:
 - Laptop with java code
@@ -48,6 +57,9 @@ Development began with a simple functional implementation in the main jawsMain c
 ### TESTING AND VALIDATION
 The system was tested incrementally throughout development by running the program before and after connecting each hardware peripheral to verify operational integrity and isolate potential issues.
 Unit testing was also performed using JUnit on the getMoisturePercentage() method, which converts raw moisture-sensor voltage readings into corresponding moisture percentages. The method was tested under three conditions:
+
+<img align="right" height="300" src="images/moisture_vs_time_graph.png" alt="Graph of Moisture Level Over Time">
+
 1. Experimentally acquired calibration values were verified to ensure that they converted to their expected moisture percentages.
 2. Raw input values within the defined sensor range were tested to confirm that the resulting moisture percentages remained within the expected lower and upper bounds.
 3. One hundred randomly generated input values were tested to verify that the method consistently produced outputs within the defined moisture-percentage range.
