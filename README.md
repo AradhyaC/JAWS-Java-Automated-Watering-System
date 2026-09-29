@@ -28,8 +28,8 @@ The Java Automated Watering System (JAWS) project was developed to explore auton
 3. StdLib – A java library that implements several libraries including graphical functionality through the StdDraw class.
     - The StdDraw class (with setCanvasSize, setPenRadius, setPenColor, clear, setFont, text, setYscale, line, and setXscale) was used for drawing a dynamic graph of moisture level over time. This was done by first storing the time and processed sensor data (of type Long and Integer respectively) in a LinkedHashMap. This LinkedHashMap was then iterated over in a For-Loop that draws the data points, connecting lines, and 10s markers on the x-axis.
 
-<img align="left" height="300" src="images/closeup.png" alt="Close-up of Seeeduino Lotus connections">
-<img align="left" height="300" src="images/oled.png" alt="OLED display outputting runtime information">
+<img align="left" width="300" src="images/closeup.png" alt="Close-up of Seeeduino Lotus connections">
+<img align="left" width="300" src="images/oled.png" alt="OLED display outputting runtime information">
 
 ### COMPONENTS USED:
 - Laptop with java code
