@@ -18,14 +18,14 @@ The Java Automated Watering System (JAWS) project was developed to explore auton
 3. Provide additional visual and auditory feedback through an LED and buzzer to indicate when the water pump is operating.
 
 ### API DESCRIPTIONS & USAGE
-1. Firmata4J – A java library that allows communication to Arduino boards through the Firmata protocol.
+1. **Firmata4J** – A java library that allows communication to Arduino boards through the Firmata protocol.
    - The FirmataDevice class (with methods start, stop, and ensureInitializationIsDone) was used to establish communication with the Arduino board.
    - I2CDevice & SSD1306 classes (with methods init, clear, display, getCanvas, drawString, drawHorizontalLine, and setTextsize) were used to initialize & utilize the OLED device on Arduino board.
    - The Pin class (with methods getPin, setMode, Mode, getIndex, getValue, setValue, addEventListener, and removeAllEventListeners) was used to initialize and use peripherals connected to pins on the Arduino board.
    - The PinEventListener interface was used to create the “PumpListener” event, to operate the D4 LED and D3 Buzzer. The state of the pump itself is set by the “PlantTask” TimerTask; the pump is switched ON if the soil moisture drops below the minimum threshold the “PumpListener” event listener then enables the buzzer and LED. Otherwise the pump is switched off, which turns off the buzzer and LED as well.
     Another event listener, “ExitListener”, was created to listen if the D6 Button was pressed, in which case the peripherals are reset, Arduino is disconnected and the program is aborted with output messages.
 
-3. StdLib – A java library that implements several libraries including graphical functionality through the StdDraw class.
+3. **StdLib** – A java library that implements several libraries including graphical functionality through the StdDraw class.
     - The StdDraw class (with setCanvasSize, setPenRadius, setPenColor, clear, setFont, text, setYscale, line, and setXscale) was used for drawing a dynamic graph of moisture level over time. This was done by first storing the time and processed sensor data (of type Long and Integer respectively) in a LinkedHashMap. This LinkedHashMap was then iterated over in a For-Loop that draws the data points, connecting lines, and 10s markers on the x-axis.
 
 <img align="right" width="300" src="images/closeup.png" alt="Close-up of Seeeduino Lotus connections">
